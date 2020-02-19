@@ -8,8 +8,13 @@ RUN apt-get update \
     # Install Tools
         gcc-6 \
         g++-6 \
-        cmake \
     && rm -rf /var/lib/apt/lists/*
 
 RUN rm /usr/bin/gcc && ln /usr/bin/gcc-6 /usr/bin/gcc
 RUN rm /usr/bin/g++ && ln /usr/bin/g++-6 /usr/bin/g++
+
+ADD https://github.com/Kitware/CMake/releases/download/v3.16.4/cmake-3.16.4-Linux-x86_64.sh /cmake-3.16.4-Linux-x86_64.sh
+RUN mkdir /opt/cmake \
+    && sh /cmake-3.16.4-Linux-x86_64.sh --prefix=/opt/cmake --skip-license \
+    && ln -s /opt/cmake/bin/cmake /usr/local/bin/cmake \
+    && rm /cmake-3.16.4-Linux-x86_64.sh
