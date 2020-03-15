@@ -12,6 +12,7 @@ RUN apt-get update \
     # Install Tools
         gcc-9 \
         g++-9 \
+        valgrind \
     && rm -rf /var/lib/apt/lists/*
 
 RUN rm /usr/bin/gcc && ln /usr/bin/gcc-9 /usr/bin/gcc
