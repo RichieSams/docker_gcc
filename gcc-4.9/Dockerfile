@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM quay.io/richiesams/ubuntu:xenial
 
 RUN apt-get update \
     # Install pre-reqs
