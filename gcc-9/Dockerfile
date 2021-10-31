@@ -13,6 +13,7 @@ RUN apt-get update \
         gcc-9 \
         g++-9 \
         valgrind \
+        xxd \
     && rm -rf /var/lib/apt/lists/*
 
 RUN rm /usr/bin/gcc && ln /usr/bin/gcc-9 /usr/bin/gcc
