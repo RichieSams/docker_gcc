@@ -1,4 +1,4 @@
-FROM quay.io/richiesams/ubuntu:bionic
+FROM quay.io/richiesams/ubuntu:focal
 
 # Install repos
 RUN apt-get update \
