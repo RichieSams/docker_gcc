@@ -14,6 +14,7 @@ RUN apt-get update \
         g++-9 \
         valgrind \
         xxd \
+        glslang-tools \
     && rm -rf /var/lib/apt/lists/*
 
 RUN rm /usr/bin/gcc && ln /usr/bin/gcc-9 /usr/bin/gcc
